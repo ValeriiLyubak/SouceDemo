@@ -13,12 +13,12 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        this.baseUrl = ConfigManager.getBaseUrl(); // Получаем URL из конфигурации
+        this.baseUrl = ConfigManager.getBaseUrl();
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        navigateToBaseUrl(); // Переходим на URL, указанный в конфигурации
+        navigateToBaseUrl();
     }
 
     private void navigateToBaseUrl() {
-        driver.get(baseUrl); // Переход по адресу
+        driver.get(baseUrl);
     }
 }
